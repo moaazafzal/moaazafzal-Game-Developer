@@ -99,12 +99,12 @@ export type Game = {
 
 export const games: Game[] = [
   {
-    title: "Airplane Game Flight Simulator",
-    genre: "Simulation",
-    installs: "10M+",
-    icon: "/img/games/airplane-sim.webp",
-    playUrl: "https://play.google.com/store/apps/details?id=com.al.airport",
-    appUrl: "",
+    title: "Rush Run (Need to pee)",
+    genre: "Casual",
+    installs: "5M+",
+    icon: "/img/games/toilet-rush.webp",
+    playUrl: "https://play.google.com/store/apps/details?id=com.leorus.rushrun",
+    appUrl: "https://apps.apple.com/app/id1590857309",
   },
   {
     // 2M+ is the owner's own figure. The App Store publishes no install
@@ -118,12 +118,12 @@ export const games: Game[] = [
     appUrl: "https://apps.apple.com/app/id6450735142",
   },
   {
-    title: "Rush Run (Need to pee)",
-    genre: "Casual",
-    installs: "5M+",
-    icon: "/img/games/toilet-rush.webp",
-    playUrl: "https://play.google.com/store/apps/details?id=com.leorus.rushrun",
-    appUrl: "https://apps.apple.com/app/id1590857309",
+    title: "Airplane Game Flight Simulator",
+    genre: "Simulation",
+    installs: "10M+",
+    icon: "/img/games/airplane-sim.webp",
+    playUrl: "https://play.google.com/store/apps/details?id=com.al.airport",
+    appUrl: "",
   },
   {
     title: "Animal Rescue - Zoo Safari",
