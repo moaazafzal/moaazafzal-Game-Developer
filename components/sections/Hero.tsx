@@ -48,10 +48,12 @@ export function Hero() {
             src={asset("/img/moaaz.webp")}
             alt={`${profile.name}, ${profile.role}`}
             width={880}
-            height={1100}
+            height={880}
             priority
-            className="w-[13rem] sm:w-[17rem] md:w-[20rem] lg:w-[23rem] max-h-[52svh] h-auto rounded-[2rem] object-cover
-                       [mask-image:linear-gradient(180deg,#000_78%,transparent_100%)]"
+            // A square studio portrait: shown as a circle, with no bottom fade.
+            // The linear mask was shaped for the old rectangular photo and
+            // would slice straight across a round one.
+            className="w-[13rem] sm:w-[17rem] md:w-[19rem] lg:w-[21rem] h-auto aspect-square rounded-full object-cover"
           />
         </Magnet>
 
