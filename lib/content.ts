@@ -8,8 +8,8 @@
  *    ("1M+"), so those are floors rather than exact counts.
  *  - Client quotes: five star reviews on that Fiverr profile, verbatim apart
  *    from spelling fixes. Names are the reviewers' Fiverr handles.
- *  - Web games and their cover art: the Aqua Games developer page on
- *    Playgama (playgama.com/developer/7283).
+ *  - Web games and their cover art: the Aqua Games and Leorus Games
+ *    developer pages on Playgama (developer/7283 and developer/4389).
  *
  * If a number changes at the source, change it here.
  */
@@ -184,7 +184,7 @@ export type WebGame = {
   url: string;
 };
 
-/** Browser games published under Aqua Games on Playgama. */
+/** Browser games published under Aqua Games and Leorus Games on Playgama. */
 export const webGames: WebGame[] = [
   {
     title: "Shadow Ninja RPG",
@@ -215,6 +215,30 @@ export const webGames: WebGame[] = [
     genre: "Skill Arcade",
     cover: "/img/web/kitty-rescue-rush.webp",
     url: "https://playgama.com/game/kitty-rescue-rush",
+  },
+  {
+    title: "Rush Run: Need to Pee",
+    genre: "Runner",
+    cover: "/img/web/rush-run-web.webp",
+    url: "https://playgama.com/game/rush-run-need-to-pee--toilet-dash-runner-game",
+  },
+  {
+    title: "Screw Puzzle: Nuts & Bolts",
+    genre: "Brain Puzzle",
+    cover: "/img/web/screw-puzzle-web.webp",
+    url: "https://playgama.com/game/screw-puzzle-nuts-bolts-master",
+  },
+  {
+    title: "Survival Rush 2D",
+    genre: "Arcade Survival",
+    cover: "/img/web/survival-rush.webp",
+    url: "https://playgama.com/game/survival-rush-2d-black-white-dodge",
+  },
+  {
+    title: "Tik Tok Challenge",
+    genre: "Skill Mini Games",
+    cover: "/img/web/tik-tok-challenge.webp",
+    url: "https://playgama.com/game/tik-tok-challenge",
   },
 ];
 
@@ -263,6 +287,7 @@ export const links = {
   github: "https://github.com/moaazafzal",
   play: "https://play.google.com/store/apps/dev?id=5373329806698673666",
   playgama: "https://playgama.com/developer/7283",
+  playgamaLeorus: "https://playgama.com/developer/4389",
 } as const;
 
 export const nav = ["About", "Services", "Games", "Contact"] as const;
