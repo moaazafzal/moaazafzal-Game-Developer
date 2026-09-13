@@ -13,6 +13,9 @@
  *  - Web games and their cover art: the Aqua Games and Leorus Games
  *    developer pages on Playgama (developer/7283 and developer/4389).
  *
+ * Location is the owner's own, not taken from Fiverr, which still shows
+ * where the account was registered.
+ *
  * If a number changes at the source, change it here.
  */
 
@@ -20,7 +23,7 @@ export const profile = {
   name: "Moaaz Afzal",
   shortName: "Moaaz",
   role: "Unity Game Developer",
-  location: "Pakistan",
+  location: "Belgium",
   email: "moaazafzal@gmail.com",
   tagline:
     "A Unity developer who ships mobile games people actually finish, and the monetisation that pays for them.",
@@ -285,6 +288,46 @@ export const reviews = [
     name: "kieronl566",
     url: "https://www.fiverr.com/amoaaz/create-unity-game-for-mobile-and-pc",
     country: "United Kingdom",
+  },
+  {
+    quote:
+      "Moaaz is an absolute pleasure to work with. He is very knowledgeable, kind, informative, and has a great desire to accomplish the task in a favorable way. He exceeded my expectations in numerous ways.",
+    name: "n7soarchangel",
+    url: "https://www.fiverr.com/amoaaz/be-your-full-stack-web-developer",
+    country: "United States",
+  },
+  {
+    quote:
+      "Moaaz was a great person to work with on getting my ads integration fixed. His replies were prompt, and the work solved all my problems. I would highly recommend using his services.",
+    name: "neowonka",
+    url: "https://www.fiverr.com/amoaaz/add-advertisement-in-unity-game",
+    country: "United States",
+  },
+  {
+    quote:
+      "Moaaz is a sincere and very cooperative guy. I am very satisfied with his work, I recommend him to everyone.",
+    name: "teutamuka",
+    url: "https://www.fiverr.com/amoaaz/create-unity-game-for-mobile-and-pc",
+    country: "Germany",
+  },
+  {
+    quote:
+      "Thank you for your help. I truly owe you a great debt of gratitude. Your kindness will never be forgotten.",
+    name: "zikrihusaini969",
+    url: "https://www.fiverr.com/amoaaz/fix-bugs-in-your-unity-game",
+    country: "Malaysia",
+  },
+  {
+    quote: "Thank you so much. Moaaz did far more than expected. Will order again!",
+    name: "g4ut4m4",
+    url: "https://www.fiverr.com/amoaaz/create-unity-game-for-mobile-and-pc",
+    country: "Austria",
+  },
+  {
+    quote: "Attention to details and quick response. Will work again soon with him.",
+    name: "tiyantiyantamil",
+    url: "https://www.fiverr.com/amoaaz/add-advertisement-in-unity-game",
+    country: "Saudi Arabia",
   },
 ] as const;
 
