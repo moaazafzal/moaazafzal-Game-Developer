@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0c0c0c;
+  --color-chalk: #d7e2ea;
+  --color-accent: #6ea8ff;
+  --font-sans: var(--font-kanit), "Kanit", system-ui, sans-serif;
+}
+
+:root {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+html,
+body {
+  background-color: var(--color-ink);
+  color: var(--color-chalk);
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--color-chalk);
+  color: var(--color-ink);
+}
+
+/* Display headings fade from steel blue into white, top to bottom. */
+.gradient-head {
+  background: linear-gradient(180deg, #a0b8d4 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* One seamless loop needs the row's content duplicated exactly once. */
+@keyframes drift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-drift {
+  animation: drift 48s linear infinite;
+  will-change: transform;
+}
+.animate-drift-reverse {
+  animation: drift 62s linear infinite reverse;
+  will-change: transform;
+}
+.drift-host:hover .animate-drift,
+.drift-host:hover .animate-drift-reverse {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+  .animate-drift,
+  .animate-drift-reverse {
+    animation: none;
+  }
+}
