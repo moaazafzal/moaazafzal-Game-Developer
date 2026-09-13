@@ -33,18 +33,30 @@ export function Reviews() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {reviews.map((r, i) => (
             <FadeIn key={r.name + i} delay={i * 0.05} y={20}>
-              <figure className="h-full flex flex-col rounded-[1.6rem] border border-chalk/12 p-6">
-                <Stars />
-                <blockquote className="mt-4 flex-1 font-light leading-relaxed text-chalk/75 text-[0.92rem]">
-                  {r.quote}
-                </blockquote>
-                <figcaption className="mt-5 pt-4 border-t border-chalk/10">
-                  <span className="block text-sm font-medium">{r.name}</span>
-                  <span className="block text-[0.62rem] font-light uppercase tracking-[0.2em] text-chalk/40">
-                    {r.country}
-                  </span>
-                </figcaption>
-              </figure>
+              <a
+                href={r.url}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="group block h-full"
+              >
+                <figure className="h-full flex flex-col rounded-[1.6rem] border border-chalk/12 p-6 group-hover:border-chalk/35 transition-colors duration-300">
+                  <Stars />
+                  <blockquote className="mt-4 flex-1 font-light leading-relaxed text-chalk/75 text-[0.92rem]">
+                    {r.quote}
+                  </blockquote>
+                  <figcaption className="mt-5 pt-4 border-t border-chalk/10 flex items-end justify-between gap-3">
+                    <span className="min-w-0">
+                      <span className="block text-sm font-medium truncate">{r.name}</span>
+                      <span className="block text-[0.62rem] font-light uppercase tracking-[0.2em] text-chalk/40">
+                        {r.country}
+                      </span>
+                    </span>
+                    <span className="shrink-0 text-[0.58rem] font-light uppercase tracking-[0.2em] text-chalk/30 group-hover:text-chalk/70 transition-colors">
+                      Read on Fiverr
+                    </span>
+                  </figcaption>
+                </figure>
+              </a>
             </FadeIn>
           ))}
         </div>

@@ -123,6 +123,9 @@ export function Contact() {
                 <PillLink href={links.linkedin} tone="outline" size="sm" external>
                   LinkedIn
                 </PillLink>
+                <PillLink href={links.upwork} tone="outline" size="sm" external>
+                  Upwork
+                </PillLink>
                 <PillLink href={links.fiverr} tone="outline" size="sm" external>
                   Fiverr
                 </PillLink>

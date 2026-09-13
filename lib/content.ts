@@ -7,7 +7,9 @@
  *    App Store listings, September 2026. Play reports installs in buckets
  *    ("1M+"), so those are floors rather than exact counts.
  *  - Client quotes: five star reviews on that Fiverr profile, verbatim apart
- *    from spelling fixes. Names are the reviewers' Fiverr handles.
+ *    from spelling fixes. Names are the reviewers' Fiverr handles. Fiverr
+ *    has no permalink for a single review, so each links to the gig page it
+ *    was left on, where that review appears.
  *  - Web games and their cover art: the Aqua Games and Leorus Games
  *    developer pages on Playgama (developer/7283 and developer/4389).
  *
@@ -247,35 +249,41 @@ export const reviews = [
     quote:
       "An absolute genius of a unity coder! I've done multiple orders and each one has been exceptional. Communication is great and fast, order quality is outstanding and the knowledge and expertise shown is more than I can comprehend.",
     name: "stevevaj",
+    url: "https://www.fiverr.com/amoaaz/add-advertisement-in-unity-game",
     country: "Australia",
   },
   {
     quote:
       "He expertly integrated AdMob, Unity Ads and in app purchases into my Unity game with great attention to detail. Everything works flawlessly, and he made the entire process smooth and stress free.",
     name: "showtimerivas",
+    url: "https://www.fiverr.com/amoaaz/create-unity-game-for-mobile-and-pc",
     country: "United States",
   },
   {
     quote:
       "For my first time working with a developer on an idea I had, I had a great experience. Moaaz made the process simple and was able to bring my vision to life. Communication is a foundation of how he conducts business.",
     name: "sw33tr00tsceo",
+    url: "https://www.fiverr.com/amoaaz/create-unity-game-for-mobile-and-pc",
     country: "United States",
   },
   {
     quote:
       "In simple terms, he knows what he is doing. The best part is that he is organized which makes it very simple for you to finish your work easily and publish faster.",
     name: "mnassar75",
+    url: "https://www.fiverr.com/amoaaz/be-your-full-stack-web-developer",
     country: "Turkey",
   },
   {
     quote:
       "Moaaz helped me integrate Google AdMob and went above and beyond with the implementation. He is extremely respectful, patient and professional with his troubleshooting. This guy is Pro.",
     name: "vzz376",
+    url: "https://www.fiverr.com/amoaaz/add-advertisement-in-unity-game",
     country: "Sweden",
   },
   {
     quote: "Best dev I've hired in a very long time.",
     name: "kieronl566",
+    url: "https://www.fiverr.com/amoaaz/create-unity-game-for-mobile-and-pc",
     country: "United Kingdom",
   },
 ] as const;
@@ -284,6 +292,7 @@ export const links = {
   email: `mailto:${profile.email}`,
   fiverr: "https://www.fiverr.com/amoaaz",
   linkedin: "https://www.linkedin.com/in/moaaz-afzal-455896177/",
+  upwork: "https://www.upwork.com/freelancers/~015926411804dbd9d8",
   github: "https://github.com/moaazafzal",
   play: "https://play.google.com/store/apps/dev?id=5373329806698673666",
   playgama: "https://playgama.com/developer/7283",
