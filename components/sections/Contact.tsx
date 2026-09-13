@@ -25,6 +25,8 @@ function ContactForm() {
     setSending(true);
     setError("");
     const data = Object.fromEntries(new FormData(e.currentTarget).entries());
+    // Reply-To the sender, so answering the notification reaches the client.
+    data._replyto = data.email;
     try {
       const res = await fetch(ENDPOINT, {
         method: "POST",

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { FadeIn } from "@/components/Motion";
 import { Magnet } from "@/components/Magnet";
 import { PillLink, ArrowIcon } from "@/components/Buttons";
-import { profile, nav, links } from "@/lib/content";
+import { profile, nav } from "@/lib/content";
 import { asset } from "@/lib/asset";
 
 export function Hero() {
@@ -63,7 +63,7 @@ export function Hero() {
               <p className="font-light uppercase tracking-wide leading-snug text-[clamp(0.8rem,1.35vw,1.35rem)] max-w-[19rem]">
                 {profile.role} shipping mobile games and the monetisation behind them
               </p>
-              <PillLink href={links.email}>
+              <PillLink href="#contact">
                 Hire me <ArrowIcon />
               </PillLink>
             </div>
