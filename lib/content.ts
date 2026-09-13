@@ -98,6 +98,22 @@ export type Game = {
 
 export const games: Game[] = [
   {
+    title: "Airplane Game Flight Simulator",
+    genre: "Simulation",
+    installs: "10M+",
+    icon: "/img/games/airplane-sim.webp",
+    playUrl: "https://play.google.com/store/apps/details?id=com.al.airport",
+    appUrl: "",
+  },
+  {
+    title: "Arcade Dairy",
+    genre: "Simulation",
+    installs: "2M+",
+    icon: "/img/games/farm-cash.webp",
+    playUrl: "",
+    appUrl: "https://apps.apple.com/app/id6450735142",
+  },
+  {
     title: "Rush Run (Need to pee)",
     genre: "Casual",
     installs: "5M+",
@@ -106,12 +122,12 @@ export const games: Game[] = [
     appUrl: "https://apps.apple.com/app/id1590857309",
   },
   {
-    title: "Arcade Dairy",
-    genre: "Simulation",
-    installs: "",
-    icon: "/img/games/farm-cash.webp",
-    playUrl: "",
-    appUrl: "https://apps.apple.com/app/id6450735142",
+    title: "Animal Rescue - Zoo Safari",
+    genre: "Action",
+    installs: "5M+",
+    icon: "/img/games/animal-rescue.webp",
+    playUrl: "https://play.google.com/store/apps/details?id=com.al.animalrescue",
+    appUrl: "",
   },
   {
     title: "Emoji Puzzle: Fun Emoji Games",
