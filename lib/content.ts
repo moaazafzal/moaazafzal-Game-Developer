@@ -8,6 +8,8 @@
  *    ("1M+"), so those are floors rather than exact counts.
  *  - Client quotes: five star reviews on that Fiverr profile, verbatim apart
  *    from spelling fixes. Names are the reviewers' Fiverr handles.
+ *  - Web games and their cover art: the Aqua Games developer page on
+ *    Playgama (playgama.com/developer/7283).
  *
  * If a number changes at the source, change it here.
  */
@@ -175,6 +177,47 @@ export const games: Game[] = [
   },
 ];
 
+export type WebGame = {
+  title: string;
+  genre: string;
+  cover: string;
+  url: string;
+};
+
+/** Browser games published under Aqua Games on Playgama. */
+export const webGames: WebGame[] = [
+  {
+    title: "Shadow Ninja RPG",
+    genre: "Adventure RPG",
+    cover: "/img/web/shadow-ninja-rpg.webp",
+    url: "https://playgama.com/game/shadow-ninja-rpg-enemy-legends",
+  },
+  {
+    title: "Merge House Tycoon",
+    genre: "Merge Strategy",
+    cover: "/img/web/merge-house-tycoon.webp",
+    url: "https://playgama.com/game/merge-house-tycoon-property-empire",
+  },
+  {
+    title: "Water Sort Master",
+    genre: "Puzzle",
+    cover: "/img/web/water-sort-master.webp",
+    url: "https://playgama.com/game/water-sort-master-color-puzzle",
+  },
+  {
+    title: "Save Princess",
+    genre: "Puzzle Adventure",
+    cover: "/img/web/save-princess.webp",
+    url: "https://playgama.com/game/save-princess",
+  },
+  {
+    title: "Kitty Rescue Rush",
+    genre: "Skill Arcade",
+    cover: "/img/web/kitty-rescue-rush.webp",
+    url: "https://playgama.com/game/kitty-rescue-rush",
+  },
+];
+
 export const reviews = [
   {
     quote:
@@ -219,6 +262,7 @@ export const links = {
   linkedin: "https://www.linkedin.com/in/moaaz-afzal-455896177/",
   github: "https://github.com/moaazafzal",
   play: "https://play.google.com/store/apps/dev?id=5373329806698673666",
+  playgama: "https://playgama.com/developer/7283",
 } as const;
 
 export const nav = ["About", "Services", "Games", "Contact"] as const;

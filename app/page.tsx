@@ -3,6 +3,7 @@ import { IconMarquee } from "@/components/sections/IconMarquee";
 import { About } from "@/components/sections/About";
 import { Services } from "@/components/sections/Services";
 import { Games } from "@/components/sections/Games";
+import { WebGames } from "@/components/sections/WebGames";
 import { Reviews } from "@/components/sections/Reviews";
 import { Contact } from "@/components/sections/Contact";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <About />
       <Services />
       <Games />
+      <WebGames />
       <Reviews />
       <Contact />
     </main>
