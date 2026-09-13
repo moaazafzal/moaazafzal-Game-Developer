@@ -5,7 +5,8 @@
  *    at fiverr.com/amoaaz (seller id 64818743).
  *  - Game titles, install buckets and store links: the live Google Play and
  *    App Store listings, September 2026. Play reports installs in buckets
- *    ("1M+"), so those are floors rather than exact counts.
+ *    ("1M+"), so those are floors rather than exact counts. One figure,
+ *    Arcade Dairy's, is the owner's own and is marked where it appears.
  *  - Client quotes: five star reviews on that Fiverr profile, verbatim apart
  *    from spelling fixes. Names are the reviewers' Fiverr handles. Fiverr
  *    has no permalink for a single review, so each links to the gig page it
@@ -106,6 +107,9 @@ export const games: Game[] = [
     appUrl: "",
   },
   {
+    // 2M+ is the owner's own figure. The App Store publishes no install
+    // count and this title has no Play listing, so unlike every other
+    // number here it cannot be checked against a store page.
     title: "Arcade Dairy",
     genre: "Simulation",
     installs: "2M+",
