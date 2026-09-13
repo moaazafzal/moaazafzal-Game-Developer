@@ -120,6 +120,9 @@ export function Contact() {
                 <PillLink href={links.email} size="sm">
                   {profile.email} <ArrowIcon />
                 </PillLink>
+                <PillLink href={links.linkedin} tone="outline" size="sm" external>
+                  LinkedIn
+                </PillLink>
                 <PillLink href={links.fiverr} tone="outline" size="sm" external>
                   Fiverr
                 </PillLink>

@@ -216,6 +216,7 @@ export const reviews = [
 export const links = {
   email: `mailto:${profile.email}`,
   fiverr: "https://www.fiverr.com/amoaaz",
+  linkedin: "https://www.linkedin.com/in/moaaz-afzal-455896177/",
   github: "https://github.com/moaazafzal",
   play: "https://play.google.com/store/apps/dev?id=5373329806698673666",
 } as const;
