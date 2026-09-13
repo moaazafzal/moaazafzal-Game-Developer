@@ -75,9 +75,15 @@ export const services = [
   },
   {
     number: "05",
-    name: "AI Automation",
+    name: "Data Analysis",
     description:
-      "Agents and automations with n8n, Make and Zapier wired to Claude and GPT: CRM, email and WhatsApp flows, APIs, sheets and databases.",
+      "Reading what the build is actually doing: retention curves, funnels, session length and ad revenue per user, so the next change is chosen from the numbers rather than from a hunch.",
+  },
+  {
+    number: "06",
+    name: "SDK Integration",
+    description:
+      "Ad mediation, analytics, attribution and publisher SDKs dropped into an existing project and verified end to end, including the build settings and store requirements that break on the first submission.",
   },
 ] as const;
 
