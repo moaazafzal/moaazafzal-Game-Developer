@@ -26,7 +26,9 @@ export function Hero() {
               </a>
             ))}
           </div>
-          <PillLink href="#contact" size="sm">
+          {/* Outline, not solid: the nav is thin uppercase type, and the solid
+              Hire me button lower in the hero should stay the louder one. */}
+          <PillLink href="#contact" tone="outline" size="sm">
             Get in touch
           </PillLink>
         </nav>
