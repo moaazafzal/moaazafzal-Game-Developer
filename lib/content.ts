@@ -368,4 +368,5 @@ export const links = {
   playgamaLeorus: "https://playgama.com/developer/4389",
 } as const;
 
-export const nav = ["About", "Services", "Games", "Contact"] as const;
+// Contact is dropped from the nav list: the Get in touch button carries it.
+export const nav = ["About", "Services", "Games"] as const;
