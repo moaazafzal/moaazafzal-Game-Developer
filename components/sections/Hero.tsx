@@ -26,12 +26,9 @@ export function Hero() {
               </a>
             ))}
           </div>
-          <a
-            href="#contact"
-            className="sm:hidden text-sm font-medium uppercase tracking-[0.14em] text-chalk/70"
-          >
-            Contact
-          </a>
+          <PillLink href="#contact" size="sm">
+            Get in touch
+          </PillLink>
         </nav>
       </FadeIn>
 
