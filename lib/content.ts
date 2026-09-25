@@ -218,6 +218,12 @@ export type WebGame = {
 /** Browser games: Ink Fighter on GitHub Pages, the rest published on Playgama. */
 export const webGames: WebGame[] = [
   {
+    title: "Royal Room Poker",
+    genre: "Poker",
+    cover: "/img/web/royal-room-poker.webp",
+    url: "https://moaazafzal.github.io/poker-proto/",
+  },
+  {
     title: "Ink Fighter",
     genre: "Shooter",
     cover: "/img/web/ink-fighter.webp",
