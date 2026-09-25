@@ -215,8 +215,14 @@ export type WebGame = {
   url: string;
 };
 
-/** Browser games published under Aqua Games and Leorus Games on Playgama. */
+/** Browser games: Ink Fighter on GitHub Pages, the rest published on Playgama. */
 export const webGames: WebGame[] = [
+  {
+    title: "Ink Fighter",
+    genre: "Shooter",
+    cover: "/img/web/ink-fighter.webp",
+    url: "https://moaazafzal.github.io/ink-fighter/",
+  },
   {
     title: "Shadow Ninja RPG",
     genre: "Adventure RPG",

@@ -17,7 +17,7 @@ export function WebGames() {
         </FadeIn>
         <FadeIn y={16} className="mb-12 sm:mb-14">
           <p className="max-w-xl font-light leading-relaxed text-chalk/55 text-[clamp(0.85rem,1.5vw,1.1rem)]">
-            Web builds published on Playgama. No install, they run in the page.
+            Web builds you can play right here. No install, they run in the page.
           </p>
         </FadeIn>
 
