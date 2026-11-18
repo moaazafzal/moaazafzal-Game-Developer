@@ -13,6 +13,11 @@
  *    was left on, where that review appears.
  *  - Web games and their cover art: the Aqua Games and Leorus Games
  *    developer pages on Playgama (developer/7283 and developer/4389).
+ *  - Studio games: the owner's own studio, Pixel Harbor Studio
+ *    (pixelharborstudio.web.app). Titles, genres, blurbs and art come from
+ *    their live Google Play listings, November 2026. They are listed on Play
+ *    under the developer name ParagonGamez, LLC. No install figures are shown:
+ *    they launched in November 2026 and Play's buckets are still tiny.
  *
  * Location is the owner's own, not taken from Fiverr, which still shows
  * where the account was registered.
@@ -29,7 +34,7 @@ export const profile = {
   tagline:
     "A Unity developer who ships mobile games people actually finish, and the monetisation that pays for them.",
   about:
-    "Seven years in Unity3D and C#, with more than a hundred mobile games shipped and millions of installs behind them. I work with hypercasual publishers on fast prototypes and with studios on the parts that decide whether a game earns: ads mediation, in app purchases, retention loops and the analytics that tell you which of them is working. I also build AI automations when a studio needs its pipeline to stop eating people's afternoons.",
+    "Seven years in Unity3D and C#, with more than a hundred mobile games shipped and millions of installs behind them. I work with hypercasual publishers on fast prototypes and with studios on the parts that decide whether a game earns: ads mediation, in app purchases, retention loops and the analytics that tell you which of them is working. I also build AI automations when a studio needs its pipeline to stop eating people's afternoons. In 2026 I started my own studio, Pixel Harbor Studio, and its first five games are live on Google Play.",
 } as const;
 
 export const stats = [
@@ -208,6 +213,65 @@ export const games: Game[] = [
   },
 ];
 
+export const studio = {
+  name: "Pixel Harbor Studio",
+  url: "https://pixelharborstudio.web.app",
+  blurb:
+    "My own indie studio. Every game here I designed, built, tested and published myself in 2026, from the first prototype to ads, purchases and store review.",
+} as const;
+
+export type StudioGame = {
+  title: string;
+  genre: string;
+  blurb: string;
+  icon: string;
+  cover: string;
+  playUrl: string;
+};
+
+export const studioGames: StudioGame[] = [
+  {
+    title: "Shard Drone: Idle Shooter",
+    genre: "Idle space shooter",
+    blurb: "Auto-shoot crystals, dodge Warden bosses and cross 10 worlds to rescue Princess Lumi.",
+    icon: "/img/studio/shard-drone-icon.webp",
+    cover: "/img/studio/shard-drone.webp",
+    playUrl: "https://play.google.com/store/apps/details?id=com.aq.sharddrone",
+  },
+  {
+    title: "Lumenwatch: Merge Defense TD",
+    genre: "Merge tower defense",
+    blurb: "Aim the lantern beam, merge jar guardians and keep the valley lit until dawn.",
+    icon: "/img/studio/lumenwatch-icon.webp",
+    cover: "/img/studio/lumenwatch.webp",
+    playUrl: "https://play.google.com/store/apps/details?id=com.aquagames.lumenwatch",
+  },
+  {
+    title: "Combward: Bee Tower Defense",
+    genre: "Bee tower defense",
+    blurb: "Build the honeycomb, merge brood into bees and turn the comb to meet each raid.",
+    icon: "/img/studio/combward-icon.webp",
+    cover: "/img/studio/combward.webp",
+    playUrl: "https://play.google.com/store/apps/details?id=com.aquagames.combward",
+  },
+  {
+    title: "Gate Rush: Idle Tycoon",
+    genre: "Idle tycoon",
+    blurb: "Board passengers, upgrade every gate and grow a transport empire across 36 destinations.",
+    icon: "/img/studio/gate-rush-icon.webp",
+    cover: "/img/studio/gate-rush.webp",
+    playUrl: "https://play.google.com/store/apps/details?id=com.aq.gaterushtycoon",
+  },
+  {
+    title: "Fluid It Up!",
+    genre: "Color puzzle",
+    blurb: "Tap a bottle, watch it splash and fill every crate with the matching color. 150 levels.",
+    icon: "/img/studio/fluid-it-up-icon.webp",
+    cover: "/img/studio/fluid-it-up.webp",
+    playUrl: "https://play.google.com/store/apps/details?id=com.aquagames.bottleup",
+  },
+];
+
 export type WebGame = {
   title: string;
   genre: string;
@@ -378,7 +442,8 @@ export const links = {
   play: "https://play.google.com/store/apps/dev?id=5373329806698673666",
   playgama: "https://playgama.com/developer/7283",
   playgamaLeorus: "https://playgama.com/developer/4389",
+  studio: "https://pixelharborstudio.web.app",
 } as const;
 
 // Contact is dropped from the nav list: the Get in touch button carries it.
-export const nav = ["About", "Services", "Games"] as const;
+export const nav = ["About", "Services", "Games", "Studio"] as const;
