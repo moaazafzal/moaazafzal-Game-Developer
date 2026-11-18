@@ -10,7 +10,9 @@ import { asset } from "@/lib/asset";
 export function Hero() {
   return (
     <section className="relative min-h-[100svh] flex flex-col overflow-x-clip">
-      <FadeIn y={-18} duration={0.6} onMount>
+      {/* Above the hero name: its glyphs run far past its box and would
+          otherwise swallow clicks on the nav links on wide screens. */}
+      <FadeIn y={-18} duration={0.6} onMount className="relative z-30">
         <nav className="flex items-center justify-between gap-6 px-5 sm:px-8 md:px-10 pt-6 md:pt-8">
           <a href="#top" className="text-base md:text-xl font-medium uppercase tracking-[0.18em]">
             {profile.shortName}
@@ -36,7 +38,7 @@ export function Hero() {
 
       <div className="relative flex-1 flex flex-col items-center justify-end">
         {/* The name sits behind the portrait, which is why it can run this big. */}
-        <FadeIn y={40} delay={0.1} onMount className="absolute top-[7%] left-0 right-0 z-0">
+        <FadeIn y={40} delay={0.1} onMount className="pointer-events-none absolute top-[7%] left-0 right-0 z-0">
           <h1 className="gradient-head font-black uppercase tracking-tight leading-[0.85] text-center whitespace-nowrap text-[15vw] lg:text-[16.5vw]">
             {profile.shortName}
           </h1>
