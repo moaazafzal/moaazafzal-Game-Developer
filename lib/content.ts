@@ -467,7 +467,7 @@ export const pillars = [
   {
     number: "03",
     title: "VR / XR simulations",
-    line: "Mixed reality safety training built in Unity with OpenXR. Try it on your phone or computer.",
+    line: "Mixed reality safety training and a warehouse robot fleet simulation, built in Unity. Try both on your phone or computer.",
     cover: "/img/xr/loto.webp",
     href: "#xr",
     cta: "Try the simulation",
@@ -475,6 +475,23 @@ export const pillars = [
 ] as const;
 
 export type XrStation = { title: string; image: string; line: string };
+
+/** A simulation project in the VR / XR section. `video` is optional (the poster shows instead). */
+export type SimProject = {
+  title: string;
+  kind: string;
+  blurb: string;
+  playUrl: string;
+  video?: string;
+  poster: string;
+  qr: string;
+  phoneHint: string;
+  partLabel: string;
+  stats: readonly { value: string; label: string }[];
+  stations: readonly XrStation[];
+  features: readonly { title: string; line: string }[];
+  stack: readonly string[];
+};
 
 /** Workshop MR: counts and wording from the project's own repository and docs. */
 export const xr = {
@@ -487,6 +504,8 @@ export const xr = {
   video: "/video/workshop-mr-tutorial.mp4",
   poster: "/img/xr/tutorial-poster.jpg",
   qr: "/img/xr/qr-workshop-mr.svg",
+  phoneHint: "Turn the phone sideways, drag to look, tap to use, pinch to move closer.",
+  partLabel: "Station",
   stats: [
     { value: "3", label: "Training stations" },
     { value: "8", label: "Procedures" },
@@ -520,6 +539,57 @@ export const xr = {
   ],
   stack: ["Unity 6", "URP", "OpenXR", "XR Interaction Toolkit", "XR Hands", "AR Foundation", "C#", "Blender (Python)", "Baked GI"],
 } as const;
+
+/**
+ * FlowLab: counts and wording from the project's own repository (README, Docs/STATUS.md,
+ * Tools/scenarios/make_scenarios.py, Tools/sim checks). Timings measured on the build Mac.
+ */
+export const flowlab = {
+  title: "FlowLab",
+  kind: "Warehouse design and robot fleet simulation",
+  blurb:
+    "Lay out racks, pack stations, conveyors and docks, then watch a fleet of robots run a shift of online orders. Every robot plans its own collision free route through space and time. Break things, rewind to any minute, change one thing and compare both layouts on exactly the same orders.",
+  playUrl: "/play/flowlab/",
+  video: "/video/flowlab-showcase.mp4",
+  poster: "/img/sims/flowlab-poster.jpg",
+  qr: "/img/sims/qr-flowlab.svg",
+  phoneHint: "Turn the phone sideways. One finger moves, two fingers zoom and turn, tap a robot to inspect it.",
+  partLabel: "Mode",
+  stats: [
+    { value: "10", label: "Scenarios" },
+    { value: "36", label: "Robots in the largest site" },
+    { value: "0.3 s", label: "Per simulated hour" },
+    { value: "16", label: "Simulation checks" },
+  ],
+  stations: [
+    {
+      title: "Run",
+      image: "/img/sims/flowlab-run.webp",
+      line: "A live dashboard: orders per hour, lead time, late orders, the fleet, and an analyst that names the bottleneck with the numbers behind it.",
+    },
+    {
+      title: "Build",
+      image: "/img/sims/flowlab-build.webp",
+      line: "Place, move and turn modules, draw conveyor lines, stay inside a budget. Every edit is validated, with errors you can click to find.",
+    },
+    {
+      title: "Compare",
+      image: "/img/sims/flowlab-compare.webp",
+      line: "Both layouts run the same orders over several shifts. You get the spread, a plain language verdict, and an HTML or CSV report.",
+    },
+  ] as XrStation[],
+  features: [
+    { title: "Collision free fleet", line: "Cooperative space and time route planning with a reservation table. Robots never collide; when two block each other one steps aside." },
+    { title: "Rewind and branch", line: "The run is deterministic and snapshotted every minute. Scrub back to any moment and continue from there with a different decision." },
+    { title: "Fair comparisons", line: "Same seed, same orders. Layouts are compared over several simulated shifts, and the report says whether the gain held on every one." },
+    { title: "Disruptions on demand", line: "Robot breakdowns, conveyor jams, chargers offline, a packer off sick or twice the orders, scripted in a challenge or triggered live." },
+    { title: "Six challenges", line: "Rush hour, three changes, lean fleet, breakdown day, peak season and a blank slate. Each one has a solution the tests prove still works." },
+    { title: "Engine free core", line: "The simulation is plain C# with no Unity types, so the same code runs in the browser and in a command line test runner." },
+  ],
+  stack: ["Unity 6", "URP", "WebGL", "C#", "Deterministic simulation", "Space time A*", "Blender (Python)", ".NET test runner"],
+} as const;
+
+export const sims: SimProject[] = [xr, flowlab];
 
 export const links = {
   email: `mailto:${profile.email}`,
