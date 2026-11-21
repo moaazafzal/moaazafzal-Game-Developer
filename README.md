@@ -24,9 +24,10 @@ the shipped-game list and the client quotes. Each figure there is sourced
 from the live Fiverr profile or the live store listings, not invented, and
 the file says which. Change it there, not in the components.
 
-The page opens with three kinds of work (`pillars`): web games, mobile games
-(Android and iOS, client games plus the studio), and VR / XR simulations
-(`xr`, the Workshop MR project).
+The page opens with three kinds of work (`pillars`), in this order: mobile
+games (Android and iOS, client games plus the studio), web games, and VR / XR
+simulations (`xr`, the Workshop MR project). The sections below follow the
+same order (`app/page.tsx`).
 
 ## Hosted builds and media
 

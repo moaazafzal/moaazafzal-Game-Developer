@@ -15,11 +15,11 @@ export default function Home() {
     <main id="top" className="overflow-x-clip bg-ink">
       <Hero />
       <IconMarquee />
-      {/* The three kinds of work come first: web, mobile (client games and the studio), VR / XR. */}
+      {/* The three kinds of work come first: mobile (client games and the studio), web, VR / XR. */}
       <Pillars />
-      <WebGames />
       <Games />
       <Studio />
+      <WebGames />
       <XRSims />
       <About />
       <Services />

@@ -450,19 +450,19 @@ export const reviews = [
 export const pillars = [
   {
     number: "01",
-    title: "Web games",
-    line: "Browser games you can play right here, no install. Published on Playgama and GitHub Pages.",
-    cover: "/img/web/royal-room-poker.webp",
-    href: "#web",
-    cta: "Play in browser",
-  },
-  {
-    number: "02",
     title: "Mobile games",
     line: "Android and iOS. A hundred plus games shipped for publishers and clients, and my own studio's titles on Google Play.",
     cover: "/img/studio/fluid-it-up.webp",
     href: "#mobile",
     cta: "Google Play & App Store",
+  },
+  {
+    number: "02",
+    title: "Web games",
+    line: "Browser games you can play right here, no install. Published on Playgama and GitHub Pages.",
+    cover: "/img/web/royal-room-poker.webp",
+    href: "#web",
+    cta: "Play in browser",
   },
   {
     number: "03",
@@ -534,4 +534,4 @@ export const links = {
 } as const;
 
 // Contact is dropped from the nav list: the Get in touch button carries it.
-export const nav = ["Web", "Mobile", "XR", "Studio", "About"] as const;
+export const nav = ["Mobile", "Studio", "Web", "XR", "About"] as const;
