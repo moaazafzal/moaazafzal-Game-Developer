@@ -41,7 +41,7 @@ export function Reviews() {
   const shown = reviews.slice(page * PER_PAGE, page * PER_PAGE + PER_PAGE);
 
   return (
-    <section className="px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-28">
+    <section className="bg-ink rounded-t-[2.5rem] md:rounded-t-[3.75rem] -mt-8 md:-mt-12 relative z-10 px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-28">
       <div className="max-w-5xl mx-auto">
         <FadeIn y={30} className="mb-12 sm:mb-16">
           <h2 className="gradient-head font-black uppercase leading-none tracking-tight text-center text-[clamp(2.25rem,8vw,6.5rem)]">

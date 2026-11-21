@@ -24,6 +24,23 @@ the shipped-game list and the client quotes. Each figure there is sourced
 from the live Fiverr profile or the live store listings, not invented, and
 the file says which. Change it there, not in the components.
 
+The page opens with three kinds of work (`pillars`): web games, mobile games
+(Android and iOS, client games plus the studio), and VR / XR simulations
+(`xr`, the Workshop MR project).
+
+## Hosted builds and media
+
+- `public/play/workshop-mr/`: the browser build of Workshop MR (Unity WebGL,
+  Brotli with the decompression fallback, so Pages can serve it without
+  special headers). It runs on computers and phones. To update it, build
+  `Workshop MR > Build > Web (WebGL)` in the moaazafzal/workshop-mr project
+  and copy `Builds/Web/*` here. Keep each file under GitHub's 100 MB limit.
+- `public/video/workshop-mr-tutorial.mp4`: the narrated tutorial, re-encoded
+  at 720p for the page (the 1080p original is a release asset of the
+  workshop-mr repository).
+- `public/img/xr/qr-workshop-mr.svg`: QR code for the browser build, made with
+  macOS Core Image (`CIQRCodeGenerator`) and checked by decoding it back.
+
 ## Deploy
 
 Pushing to `main` runs `.github/workflows/deploy.yml`, which builds the

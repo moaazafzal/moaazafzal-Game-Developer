@@ -82,19 +82,19 @@ function GameCard({ game, index, total }: { game: Game; index: number; total: nu
 export function Games() {
   return (
     <section
-      id="games"
-      className="bg-ink rounded-t-[2.5rem] md:rounded-t-[3.75rem] -mt-8 md:-mt-12 relative z-10 px-5 sm:px-8 md:px-10 pt-20 sm:pt-24 pb-24"
+      id="mobile"
+      className="bg-ink relative z-10 px-5 sm:px-8 md:px-10 pt-4 sm:pt-8 pb-24"
     >
       <div className="max-w-5xl mx-auto">
         <FadeIn y={36} className="mb-6">
           <h2 className="gradient-head font-black uppercase leading-none tracking-tight text-[clamp(2.75rem,11vw,9.5rem)]">
-            Shipped
+            Mobile games
           </h2>
         </FadeIn>
         <FadeIn y={18} className="mb-14 sm:mb-20">
           <p className="max-w-xl font-light leading-relaxed text-chalk/55 text-[clamp(0.85rem,1.5vw,1.1rem)]">
-            A slice of the catalogue, live on the stores today. Install figures are
-            the buckets Google Play publishes, so treat them as floors.
+            Android and iOS. A slice of the catalogue, live on Google Play and the App Store
+            today. Install figures are the buckets Google Play publishes, so treat them as floors.
           </p>
         </FadeIn>
 

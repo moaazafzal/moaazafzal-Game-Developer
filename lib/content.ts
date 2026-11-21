@@ -19,6 +19,13 @@
  *    under the developer name ParagonGamez, LLC. No install figures are shown:
  *    they launched in November 2026 and Play's buckets are still tiny.
  *
+ *  - VR / XR simulations: the owner's own project, Workshop MR. Station,
+ *    procedure and feature counts come from its source repository
+ *    (github.com/moaazafzal/workshop-mr), November 2026. Images and the
+ *    tutorial video are rendered from the project itself. It has been run in
+ *    the Unity editor and in a browser; it has not been released on a headset
+ *    store, and nothing here says it has.
+ *
  * Location is the owner's own, not taken from Fiverr, which still shows
  * where the account was registered.
  *
@@ -28,13 +35,13 @@
 export const profile = {
   name: "Moaaz Afzal",
   shortName: "Moaaz",
-  role: "Unity Game Developer",
+  role: "Unity Game & XR Developer",
   location: "Belgium",
   email: "moaazafzal@gmail.com",
   tagline:
-    "A Unity developer who ships mobile games people actually finish, and the monetisation that pays for them.",
+    "A Unity developer who ships web and mobile games people actually finish, the monetisation that pays for them, and VR / XR training simulations.",
   about:
-    "Seven years in Unity3D and C#, with more than a hundred mobile games shipped and millions of installs behind them. I work with hypercasual publishers on fast prototypes and with studios on the parts that decide whether a game earns: ads mediation, in app purchases, retention loops and the analytics that tell you which of them is working. I also build AI automations when a studio needs its pipeline to stop eating people's afternoons. In 2026 I started my own studio, Pixel Harbor Studio, and its first five games are live on Google Play.",
+    "Seven years in Unity3D and C#, with more than a hundred mobile games shipped and millions of installs behind them. I work with hypercasual publishers on fast prototypes and with studios on the parts that decide whether a game earns: ads mediation, in app purchases, retention loops and the analytics that tell you which of them is working. I also build AI automations when a studio needs its pipeline to stop eating people's afternoons. In 2026 I started my own studio, Pixel Harbor Studio, and its first five games are live on Google Play. I also build VR and mixed reality training simulations in Unity with OpenXR, the XR Interaction Toolkit and AR Foundation.",
 } as const;
 
 export const stats = [
@@ -90,6 +97,12 @@ export const services = [
     name: "SDK Integration",
     description:
       "Ad mediation, analytics, attribution and publisher SDKs dropped into an existing project and verified end to end, including the build settings and store requirements that break on the first submission.",
+  },
+  {
+    number: "07",
+    name: "VR / XR Simulations",
+    description:
+      "Training and product simulations for standalone headsets and the browser: OpenXR, hand tracking, passthrough mixed reality, data driven procedures, scoring and debriefs, with a desktop and touch version of the same build for people without a headset.",
   },
 ] as const;
 
@@ -433,6 +446,81 @@ export const reviews = [
   },
 ] as const;
 
+/** The three kinds of work, shown as cards at the top of the page. */
+export const pillars = [
+  {
+    number: "01",
+    title: "Web games",
+    line: "Browser games you can play right here, no install. Published on Playgama and GitHub Pages.",
+    cover: "/img/web/royal-room-poker.webp",
+    href: "#web",
+    cta: "Play in browser",
+  },
+  {
+    number: "02",
+    title: "Mobile games",
+    line: "Android and iOS. A hundred plus games shipped for publishers and clients, and my own studio's titles on Google Play.",
+    cover: "/img/studio/fluid-it-up.webp",
+    href: "#mobile",
+    cta: "Google Play & App Store",
+  },
+  {
+    number: "03",
+    title: "VR / XR simulations",
+    line: "Mixed reality safety training built in Unity with OpenXR. Try it on your phone or computer.",
+    cover: "/img/xr/loto.webp",
+    href: "#xr",
+    cta: "Try the simulation",
+  },
+] as const;
+
+export type XrStation = { title: string; image: string; line: string };
+
+/** Workshop MR: counts and wording from the project's own repository and docs. */
+export const xr = {
+  title: "Workshop MR",
+  kind: "Mixed reality industrial safety training",
+  blurb:
+    "A trainee stands at real size equipment, anchored on their own table through passthrough or in a virtual workshop, and carries out safety critical procedures with their hands. The simulation watches what they actually do, catches a mistake the moment it happens, and debriefs them afterwards.",
+  playUrl: "/play/workshop-mr/",
+  liveUrl: "https://moaazafzal.github.io/moaazafzal-Game-Developer/play/workshop-mr/",
+  video: "/video/workshop-mr-tutorial.mp4",
+  poster: "/img/xr/tutorial-poster.jpg",
+  qr: "/img/xr/qr-workshop-mr.svg",
+  stats: [
+    { value: "3", label: "Training stations" },
+    { value: "8", label: "Procedures" },
+    { value: "5", label: "Languages" },
+    { value: "76", label: "Automated tests" },
+  ],
+  stations: [
+    {
+      title: "Electrical lockout / tagout",
+      image: "/img/xr/loto.webp",
+      line: "A 400 V motor starter: isolate, lock, tag, try, prove dead with a multimeter, release stored energy, then find and replace a blown fuse.",
+    },
+    {
+      title: "Pump maintenance",
+      image: "/img/xr/pump.webp",
+      line: "Release trapped pressure, strip a bolted joint, fit a new gasket and torque the cover back in three cross pattern passes.",
+    },
+    {
+      title: "Fire response",
+      image: "/img/xr/fire.webp",
+      line: "Raise the alarm, pick the extinguisher that works on this fire, and use it properly: pull, aim at the base, squeeze, sweep.",
+    },
+  ] as XrStation[],
+  features: [
+    { title: "Real behaviour", line: "Circuits, pressure, torque and fire respond the way the real thing does: the line side stays live, a used gasket never seals, water on burning liquid spreads it." },
+    { title: "Mistakes caught live", line: "Every safety rule is checked as the trainee works, scored by severity, and listed in the debrief with the step it happened in." },
+    { title: "Three training modes", line: "Guided explains every step out loud. Practice makes hints cost points. Assessment is timed, and one critical mistake ends it." },
+    { title: "Any device", line: "Hand tracking and controllers through OpenXR, or mouse and keyboard, or touch on a phone. All of them drive the same simulation." },
+    { title: "Progress and certificates", line: "Every attempt is saved. Stars, best scores per mode, and a certificate per station once all of its assessments are passed." },
+    { title: "Generated content pipeline", line: "Every model, label, texture, sound and voice line is generated from code and data, and an autopilot test completes each procedure." },
+  ],
+  stack: ["Unity 6", "URP", "OpenXR", "XR Interaction Toolkit", "XR Hands", "AR Foundation", "C#", "Blender (Python)", "Baked GI"],
+} as const;
+
 export const links = {
   email: `mailto:${profile.email}`,
   fiverr: "https://www.fiverr.com/amoaaz",
@@ -446,4 +534,4 @@ export const links = {
 } as const;
 
 // Contact is dropped from the nav list: the Get in touch button carries it.
-export const nav = ["About", "Services", "Games", "Studio"] as const;
+export const nav = ["Web", "Mobile", "XR", "Studio", "About"] as const;

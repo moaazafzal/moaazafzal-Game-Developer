@@ -12,7 +12,7 @@ export function WebGames() {
       <div className="max-w-5xl mx-auto">
         <FadeIn y={30} className="mb-5">
           <h2 className="gradient-head font-black uppercase leading-none tracking-tight text-[clamp(2.25rem,8vw,6.5rem)]">
-            Play in browser
+            Web games
           </h2>
         </FadeIn>
         <FadeIn y={16} className="mb-12 sm:mb-14">

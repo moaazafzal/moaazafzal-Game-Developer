@@ -17,7 +17,7 @@ export function Hero() {
           <a href="#top" className="text-base md:text-xl font-medium uppercase tracking-[0.18em]">
             {profile.shortName}
           </a>
-          <div className="hidden sm:flex gap-7 md:gap-11">
+          <div className="hidden sm:flex gap-5 md:gap-9">
             {nav.map((item) => (
               <a
                 key={item}
@@ -62,7 +62,7 @@ export function Hero() {
           <FadeIn y={18} delay={0.3} onMount>
             <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-6">
               <p className="font-light uppercase tracking-wide leading-snug text-[clamp(0.8rem,1.35vw,1.35rem)] max-w-[19rem]">
-                {profile.role} shipping mobile games and the monetisation behind them
+                Unity developer shipping web games, mobile games and VR / XR simulations
               </p>
               <PillLink href="#contact">
                 Hire me <ArrowIcon />
