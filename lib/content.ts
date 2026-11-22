@@ -550,7 +550,7 @@ export const fleetfloor = {
   blurb:
     "Lay out racks, pack stations, conveyors and docks, then watch a fleet of robots run a shift of online orders. Every robot plans its own collision free route through space and time. Break things, rewind to any minute, change one thing and compare both layouts on exactly the same orders.",
   playUrl: "/play/fleetfloor/",
-  video: "/video/fleetfloor-showcase.mp4",
+  video: "/video/fleetfloor-tutorial.mp4",
   poster: "/img/sims/fleetfloor-poster.jpg",
   qr: "/img/sims/qr-fleetfloor.svg",
   phoneHint: "Turn the phone sideways. One finger moves, two fingers zoom and turn, tap a robot to inspect it.",

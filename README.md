@@ -45,8 +45,9 @@ same order (`app/page.tsx`).
   moaazafzal/flowlab, working name FlowLab: `WebBuild.Build` in batch mode, then
   copy `Builds/Web/*` here). Same Brotli + fallback setup. Its shared room uses
   PeerJS from unpkg (loaded by the page) for browser-to-browser connections.
-- `public/video/fleetfloor-showcase.mp4`: 60 s captioned showcase, 720p
-  (recorded by the `Showcase` play-mode test in that repo). Stills in
+- `public/video/fleetfloor-tutorial.mp4`: the 7-minute narrated tutorial, 720p
+  (recorded by the `Tutorial` + `TutorialQuest` play-mode tests in that repo and
+  mixed by its `Tools/tutorial/mux.py`; the 1080p original is a release asset there). Stills in
   `public/img/sims/` come from its screenshot tests; `qr-fleetfloor.svg` is made
   the same way as the Workshop MR code.
 
