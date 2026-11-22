@@ -467,7 +467,7 @@ export const pillars = [
   {
     number: "03",
     title: "VR / XR simulations",
-    line: "Mixed reality safety training and a warehouse robot fleet simulation, built in Unity. Try both on your phone or computer.",
+    line: "Mixed reality safety training and a warehouse robot fleet simulation you can plan in together, built in Unity. Try both on your phone or computer.",
     cover: "/img/xr/loto.webp",
     href: "#xr",
     cta: "Try the simulation",
@@ -541,40 +541,40 @@ export const xr = {
 } as const;
 
 /**
- * FlowLab: counts and wording from the project's own repository (README, Docs/STATUS.md,
- * Tools/scenarios/make_scenarios.py, Tools/sim checks). Timings measured on the build Mac.
+ * Fleetfloor (repository moaazafzal/flowlab, working name FlowLab): counts and wording from the project's
+ * README, Docs/STATUS.md, Tools/scenarios/make_scenarios.py and Tools/sim checks. Timings measured on the build Mac.
  */
-export const flowlab = {
-  title: "FlowLab",
+export const fleetfloor = {
+  title: "Fleetfloor",
   kind: "Warehouse design and robot fleet simulation",
   blurb:
     "Lay out racks, pack stations, conveyors and docks, then watch a fleet of robots run a shift of online orders. Every robot plans its own collision free route through space and time. Break things, rewind to any minute, change one thing and compare both layouts on exactly the same orders.",
-  playUrl: "/play/flowlab/",
-  video: "/video/flowlab-showcase.mp4",
-  poster: "/img/sims/flowlab-poster.jpg",
-  qr: "/img/sims/qr-flowlab.svg",
+  playUrl: "/play/fleetfloor/",
+  video: "/video/fleetfloor-showcase.mp4",
+  poster: "/img/sims/fleetfloor-poster.jpg",
+  qr: "/img/sims/qr-fleetfloor.svg",
   phoneHint: "Turn the phone sideways. One finger moves, two fingers zoom and turn, tap a robot to inspect it.",
   partLabel: "Mode",
   stats: [
     { value: "10", label: "Scenarios" },
     { value: "36", label: "Robots in the largest site" },
     { value: "0.3 s", label: "Per simulated hour" },
-    { value: "16", label: "Simulation checks" },
+    { value: "17", label: "Simulation checks" },
   ],
   stations: [
     {
       title: "Run",
-      image: "/img/sims/flowlab-run.webp",
+      image: "/img/sims/fleetfloor-run.webp",
       line: "A live dashboard: orders per hour, lead time, late orders, the fleet, and an analyst that names the bottleneck with the numbers behind it.",
     },
     {
       title: "Build",
-      image: "/img/sims/flowlab-build.webp",
+      image: "/img/sims/fleetfloor-build.webp",
       line: "Place, move and turn modules, draw conveyor lines, stay inside a budget. Every edit is validated, with errors you can click to find.",
     },
     {
       title: "Compare",
-      image: "/img/sims/flowlab-compare.webp",
+      image: "/img/sims/fleetfloor-compare.webp",
       line: "Both layouts run the same orders over several shifts. You get the spread, a plain language verdict, and an HTML or CSV report.",
     },
   ] as XrStation[],
@@ -582,14 +582,14 @@ export const flowlab = {
     { title: "Collision free fleet", line: "Cooperative space and time route planning with a reservation table. Robots never collide; when two block each other one steps aside." },
     { title: "Rewind and branch", line: "The run is deterministic and snapshotted every minute. Scrub back to any moment and continue from there with a different decision." },
     { title: "Fair comparisons", line: "Same seed, same orders. Layouts are compared over several simulated shifts, and the report says whether the gain held on every one." },
-    { title: "Disruptions on demand", line: "Robot breakdowns, conveyor jams, chargers offline, a packer off sick or twice the orders, scripted in a challenge or triggered live." },
-    { title: "Six challenges", line: "Rush hour, three changes, lean fleet, breakdown day, peak season and a blank slate. Each one has a solution the tests prove still works." },
-    { title: "Engine free core", line: "The simulation is plain C# with no Unity types, so the same code runs in the browser and in a command line test runner." },
+    { title: "Plan together", line: "Open a room and send the link: everyone runs the same warehouse in lockstep in their own browser, edits the layout live, and sees each other's pointer and pinned notes. No server, no install." },
+    { title: "Quest tabletop mode", line: "On a Meta Quest the warehouse becomes a miniature on your real table through passthrough, pointed at with hands or controllers. Built and checked in the editor; headset testing is next." },
+    { title: "Six challenges", line: "Rush hour, three changes, lean fleet, breakdown day, peak season and a blank slate, plus breakdowns and rushes on demand. Each challenge has a solution the tests prove still works." },
   ],
-  stack: ["Unity 6", "URP", "WebGL", "C#", "Deterministic simulation", "Space time A*", "Blender (Python)", ".NET test runner"],
+  stack: ["Unity 6", "URP", "WebGL", "C#", "Deterministic simulation", "Space time A*", "WebRTC (PeerJS)", "OpenXR", "AR Foundation", "Blender (Python)"],
 } as const;
 
-export const sims: SimProject[] = [xr, flowlab];
+export const sims: SimProject[] = [xr, fleetfloor];
 
 export const links = {
   email: `mailto:${profile.email}`,

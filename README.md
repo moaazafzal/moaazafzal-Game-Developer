@@ -26,7 +26,7 @@ the file says which. Change it there, not in the components.
 
 The page opens with three kinds of work (`pillars`), in this order: mobile
 games (Android and iOS, client games plus the studio), web games, and VR / XR
-simulations (`sims`: Workshop MR (`xr`) and FlowLab (`flowlab`)). The sections below follow the
+simulations (`sims`: Workshop MR (`xr`) and Fleetfloor (`fleetfloor`)). The sections below follow the
 same order (`app/page.tsx`).
 
 ## Hosted builds and media
@@ -41,13 +41,14 @@ same order (`app/page.tsx`).
   workshop-mr repository).
 - `public/img/xr/qr-workshop-mr.svg`: QR code for the browser build, made with
   macOS Core Image (`CIQRCodeGenerator`) and checked by decoding it back.
-- `public/play/flowlab/`: the browser build of FlowLab (moaazafzal/flowlab,
-  `FlowLab > Build > Web (WebGL)` or `WebBuild.Build` in batch mode, then copy
-  `Builds/Web/*` here). Same Brotli + fallback setup.
-- `public/video/flowlab-showcase.mp4`: 60 s captioned showcase, 720p (recorded
-  by the `Showcase` play-mode test in the flowlab repo). Stills in
-  `public/img/sims/` come from that project's screenshot tests;
-  `qr-flowlab.svg` is made the same way as the Workshop MR code.
+- `public/play/fleetfloor/`: the browser build of Fleetfloor (repository
+  moaazafzal/flowlab, working name FlowLab: `WebBuild.Build` in batch mode, then
+  copy `Builds/Web/*` here). Same Brotli + fallback setup. Its shared room uses
+  PeerJS from unpkg (loaded by the page) for browser-to-browser connections.
+- `public/video/fleetfloor-showcase.mp4`: 60 s captioned showcase, 720p
+  (recorded by the `Showcase` play-mode test in that repo). Stills in
+  `public/img/sims/` come from its screenshot tests; `qr-fleetfloor.svg` is made
+  the same way as the Workshop MR code.
 
 ## Deploy
 
